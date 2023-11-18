@@ -4,10 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
-    <a href="index.html"><img src="img\ludo.jpg" alt="ludo" style="width:150px;height:150px">Ludo</a>
-    <a href="snake/snake.html"><img src="img\Untitled design (2).png" alt="SnakeMania" style="width:150px;height:150px">SnakeMania</a>
-    <a href="tictactoe/tictactoe.html"><img src="img\tic-tac-toe-game-isolated-on-white-background-vector-13990236.jpg" alt="tic-tac-toe" style="width:150px;height:150px">Tic-Tac-Toe</a>
+    <div class="games-container">
+        <a href="index.html" class="game-link">
+            <div class="game ludo">
+                <img src="img\ludo.jpg" alt="ludo">
+                <p>ludo</p>
+            </div>
+        </a>
+
+        <a href="snake/snake.html" class="game-link">
+            <div class="game SnakeMania">
+                <img src="img\Untitled design (2).png" alt="SnakeMania">
+                <p>SnakeMania</p>
+            </div>
+        </a>
+
+        <a href="tictactoe/tictactoe.html" class="game-link">
+            <div class="game Tic-Tac-Toe">
+                <img src="img\tic-tac-toe-game-isolated-on-white-background-vector-13990236.jpg" alt="tic-tac-toe">
+                <p>Tic-Tac-Toe</p>
+            </div>  
+        </a>
+    </div>
 </body>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .games-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .game {
+        text-align: center;
+        flex: 1;
+        margin: 10px;
+        position: relative;
+    }
+
+    .game:hover p {
+        opacity: 1;
+    }
+
+    .game img {
+        width: 150px;
+        height: 150px;
+        transition: opacity 0.3s ease;
+    }
+
+    .game p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        color: white;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        transition: opacity 0.3s ease;
+    }
+</style>
 </html>
